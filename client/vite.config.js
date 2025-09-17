@@ -14,7 +14,7 @@ export default defineConfig({
       },
     },
     hmr: {
-      host: 'watched-orlando-reel-acute.trycloudflare.com',
+      host: 'straight-atlantic-nicholas-initial.trycloudflare.com',
       protocol: 'wss',
       clientPort: 443,
     },
