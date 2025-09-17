@@ -4,7 +4,7 @@ import {defineConfig} from 'vite';
 export default defineConfig({
   envDir: '../',
   server: {
-    allowedHosts: '*.ngrok-free.app',
+    allowedHosts: '',
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
@@ -14,7 +14,12 @@ export default defineConfig({
       },
     },
     hmr: {
+      host: 'watched-orlando-reel-acute.trycloudflare.com',
+      protocol: 'wss',
       clientPort: 443,
+    },
+    sourcemapIgnoreList(sourcePath, sourcemapPath) {
+      return sourcePath.includes('node_modeules');
     },
   },
 });
